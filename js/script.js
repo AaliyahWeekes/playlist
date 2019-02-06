@@ -36,7 +36,25 @@ var songLinks = [
 
 function displaySongInfo(){
     // BELOW Use forEach Loop to display the data from each of your arrays in the correct div
+    images.forEach(function(image) {
+        $("#images").append("<img src='" + image + "'>");   
+    });
 
+    songs.forEach(function(song) {
+        $("#songs").append("<p>" + song + "</p>"); 
+    });
+
+    artists.forEach(function(artist) {
+        $("#artists").append("<p> By: " + artist + "</p>");   
+    });
+
+    lengths.forEach(function(length) {
+        $("#lengths").append("<p>" + length + "</p>"); 
+    });
+
+    songLinks.forEach(function(link) {
+        $("#links").append("<a href='" + link + "'> Listen </a>"); 
+    });
 }
 
 function emptySongInfo(){
